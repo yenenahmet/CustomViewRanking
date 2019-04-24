@@ -1,4 +1,5 @@
 Ne işe yarar ? 
+_______________________________________________________________________________
 
  Elimizde bir yönetim paneli  var ve bu yönetim paneli  bir activity ile yönetilmekte,
 Activity üzerinde  dashboard, mesaj kutusu , bildirim alanları..  kısacası birbirinden farklı 10 view olduğunu düşünelim ,
@@ -9,6 +10,7 @@ edebilirsiniz . Kısacası bu amaca hizmet etmek için yazılmıştır .
 
 
 * Dinleme Yapıları 
+__________________________________
 
   * ItemClickListener
   
@@ -35,6 +37,7 @@ edebilirsiniz . Kısacası bu amaca hizmet etmek için yazılmıştır .
   
   
   * Core  fonksiyonları 
+  ________________________________________
   
   addViewToList() ->   Eklemek istediğiniz view'ın idesini ve sıra numarasını alarak listeye ekler
   ve  animasyon çalıştırmaz ,view doldurmaz ! 
@@ -61,6 +64,7 @@ edebilirsiniz . Kısacası bu amaca hizmet etmek için yazılmıştır .
    
    
    * Eğer sınıf ile işiniz biterse çalıştırmayı unutmayın 
+   _______________________________________________________
    
     @Override
     protected void onDestroy() {
@@ -73,6 +77,7 @@ edebilirsiniz . Kısacası bu amaca hizmet etmek için yazılmıştır .
     
     
    * Constructor
+   ___________________________
    
    LinearLayout containerView,  Context context Nesnelerini Null gönderirseniz NullPointerException fırlatır !
   
