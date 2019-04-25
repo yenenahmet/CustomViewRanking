@@ -2,11 +2,12 @@
 _______________________________________________________________________________
 
  Elimizde bir yönetim paneli  var ve bu yönetim paneli  bir activity ile yönetilmekte,
-Activity üzerinde  dashboard, mesaj kutusu , bildirim alanları..  kısacası birbirinden farklı 10 view olduğunu düşünelim ,
+Activity üzerinde  dashboard, mesaj kutusu , bildirim alanları...  kısacası birbirinden farklı 10 view olduğunu düşünelim ,
 bu viewler üzerinde uzak sunucudan aldığınız bilgilere göre veya localde kullanıcıların  hangi view'ı hangi sırada ekranda görünmesi
 gerektiğini seçtirmek istiyorsunuz.  Gelen seçimlere göre viewleri bir sıraya sokabilirsiniz ve  bunu yaparken animasyonlar kullanabilirsiniz
 ayrıca animasyonları değişim durumları geliş sıralarına göre değiştirebilirsiniz geliş sürelerine ve animasyon tiplerine anlık müdahele 
-edebilirsiniz . Kısacası bu amaca hizmet etmek için yazılmıştır .
+edebilirsiniz . 
+Kısacası bu amaca hizmet etmek için yazılmıştır .
 
 
 * Dinleme Yapıları 
