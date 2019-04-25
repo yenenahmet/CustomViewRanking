@@ -60,6 +60,7 @@ __________________________________
   * Boolean Type 
   
    isDelayed = viewler dolarken beklemeli bir şekilde dolsunmu ? 
+   
    isContinueScrool = viewler dolarken scroll otomatik aşağı doğru kaysınmı ?
    
    
