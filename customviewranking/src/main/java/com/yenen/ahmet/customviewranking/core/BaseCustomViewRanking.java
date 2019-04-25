@@ -101,7 +101,7 @@ public class BaseCustomViewRanking {
     }
     // Sparse
 
-    // OnDestroy Or MVVM OnClread RUN
+    // OnDestroy Or MVVM onCleared()  RUN
     public final void unBind() {
         clearSparse();
         viewSparseArray = null;
