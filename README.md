@@ -2,9 +2,9 @@
 _______________________________________________________________________________
 
  Elimizde bir yönetim paneli  var ve bu yönetim paneli  bir activity ile yönetilmekte,
-Activity üzerinde  dashboard, mesaj kutusu , bildirim alanları...  kısacası birbirinden farklı 10 view olduğunu düşünelim ,
-bu viewler üzerinde uzak sunucudan aldığınız bilgilere göre veya localde kullanıcıların  hangi view'ı hangi sırada ekranda görünmesi
-gerektiğini seçtirmek istiyorsunuz.  Gelen seçimlere göre viewleri bir sıraya sokabilirsiniz ve  bunu yaparken animasyonlar kullanabilirsiniz
+Activity üzerinde  gösterge paneli, mesaj kutusu , bildirim alanları...  kısacası birbirinden farklı 10 görünüm olduğunu düşünelim ,
+bu görünümler üzerinde uzak sunucudan aldığınız bilgilere göre veya yerelde kullanıcıların  hangi görünümü hangi sırada ekranda görünmesi
+gerektiğini seçtirmek istiyorsunuz.  Gelen seçimlere göre görünümleri bir sıraya sokabilirsiniz ve  bunu yaparken animasyonlar kullanabilirsiniz
 ayrıca animasyonları değişim durumları geliş sıralarına göre değiştirebilirsiniz geliş sürelerine ve animasyon tiplerine anlık müdahele 
 edebilirsiniz . 
 Kısacası bu amaca hizmet etmek için yazılmıştır .
@@ -15,22 +15,22 @@ __________________________________
 
   - ItemClickListener
   
-  Ekran üzerinden hangi view tıkladıysanız o view ile ilgili atadığınız Sıra Numarasını ve View Nesnesini dinler.
+  Ekran üzerinden hangi görünüme tıkladıysanız o görünüm ile ilgili atadığınız Sıra Numarasını ve görünüm nesnesini dinler.
   
   - DelayedAllViewListener
   
-  Eklemek istediğiniz layout ları sıra numarasına göre ekledikten sonra (viewSorting.addViewToList(1,R.layout.XXXX))
- refreshViewSequentially(); fonksiyonunu çalıştırdığınızda  viewleriniz dolmaya başlar ve onStart(boolean isAdd) tetiklenir .
+  Eklemek istediğiniz görünümleri sıra numarasına göre ekledikten sonra (viewSorting.addViewToList(1,R.layout.XXXX))
+ refreshViewSequentially(); fonksiyonunu çalıştırdığınızda  görünüm dolmaya başlar ve onStart(boolean isAdd) tetiklenir .
  
  - onStart(boolean isAdd)  -> ekleme veya silme işlemine göre  (ekleme true silme false) boolean değer döndürür.
  
- view dolumu gerçekleşip bittikten sonra onEnd(boolean isAdd) tetiklenir .
+ görünüm dolumu gerçekleşip bittikten sonra onEnd(boolean isAdd) tetiklenir .
  
  -onEnd(boolean isAdd) -> ekleme veya silme işlemine göre  (ekleme true silme false) boolean değer döndürür.
  
  - ChangingViewListener 
  
- Bir ekleme veya silme gerçekleşirken view üzerinde değişiklik olduğunu bildirir onChange(int rowNumber,boolean isAdd,int position) tektiklenir
+ Bir ekleme veya silme gerçekleşirken görünüm üzerinde değişiklik olduğunu bildirir onChange(int rowNumber,boolean isAdd,int position) tektiklenir
  
   - onChange(int rowNumber,boolean isAdd,int position)  - >rowNumber addViewToList(1,R.layout.XXXX) bu fonksiyonda eklediğiniz sıra numarası,
   
@@ -40,29 +40,29 @@ __________________________________
   * Core  fonksiyonları 
   ________________________________________
   
-  addViewToList() ->   Eklemek istediğiniz view'ın idesini ve sıra numarasını alarak listeye ekler
+  addViewToList() ->   Eklemek istediğiniz görünümün id'sini ve sıra numarasını alarak listeye ekler
   ve  animasyon çalıştırmaz ,view doldurmaz ! 
   
   addViewList() ->  addViewToList gibi çalışır fakat farklı olarak her ekleme işleminde animasyonu çalıştırır view doldurur
   
   addAllView() -> addViewToList() fonksiyonu ile listeye ekleme işlemlerinizi yaptıysanız ve ekrana basmak istiyorsanız bunu çalıştırabilirsiniz .
   
-  refreshViewSequentially() -> ekran üzerinde kalan viewleriniz var hepsini siler sıralar ve tekrar doldurur 
+  refreshViewSequentially() -> ekran üzerinde kalan görünümlerin hepsini siler, sıralar ve tekrar doldurur 
   
-  refreshView() -> ekran üzerinde kalan viewleriniz var hepsini siler ve tekrar doldurur 
+  refreshView() -> ekran üzerinde kalan görünümlerin hepsini siler ve tekrar doldurur. 
   
-  removeAllViewsDelayed() -> view lerinizi animasyonlu bir şekilde siler 
+  removeAllViewsDelayed() -> görünümlerinizi animasyonlu bir şekilde siler 
   
-  removeAllViews() - > tüm viewleri siler 
+  removeAllViews() - > tüm görünümleri siler 
   
-  removeView() -> sıra numarasına göre view 'i siler 
+  removeView() -> sıra numarasına göre görünümü siler 
   
   
   * Boolean Type 
   
-   isDelayed = viewler dolarken beklemeli bir şekilde dolsunmu ? 
+   isDelayed = görünüm dolarken beklemeli bir şekilde dolsun mu ? 
    
-   isContinueScrool = viewler dolarken scroll otomatik aşağı doğru kaysınmı ?
+   isContinueScrool = görünümler dolarken kayrdıma otomatik aşağı doğru kaysın mı ?
    
    
    * Eğer sınıf ile işiniz biterse çalıştırmayı unutmayın 
@@ -82,6 +82,9 @@ __________________________________
    ___________________________
    
    LinearLayout containerView,  Context context Nesnelerini Null gönderirseniz NullPointerException fırlatır !
+   
+   
+   Görünüm  -> View 
   
   
   
