@@ -1,3 +1,20 @@
+
+Gradle :
+
+    allprojects {
+        repositories {
+            jcenter()
+            maven { url "https://jitpack.io" }
+        }
+   }
+   dependencies {
+     implementation 'com.github.yenenahmet:CustomViewRanking:0.1.0'
+   }
+
+
+
+
+
 * Ne işe yarar ? 
 _______________________________________________________________________________
 
