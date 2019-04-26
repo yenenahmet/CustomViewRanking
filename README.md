@@ -8,10 +8,12 @@ Gradle :
         }
    }
    dependencies {
+   
      implementation 'com.github.yenenahmet:CustomViewRanking:0.1.0'
+     
    }
 
-
+---------------------------------------------
 
 
 
